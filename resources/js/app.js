@@ -14,7 +14,7 @@ import store from './store/store';
 Vue.component('chat', require('./components/chat/Chat').default);
 Vue.component('users', require('./components/chat/Users').default);
 Vue.component('messages', require('./components/chat/Messages').default);
-
+Vue.component('message', require('./components/chat/Message').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

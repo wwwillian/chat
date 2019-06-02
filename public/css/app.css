@@ -10662,3 +10662,12 @@ a.text-dark:focus {
   }
 }
 
+#app .navbar {
+  background-color: #e5ddd5 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04) !important;
+}
+
+body {
+  background: url("/imgs/background.jpg");
+}
+

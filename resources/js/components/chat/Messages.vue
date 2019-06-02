@@ -1,10 +1,11 @@
 <template>
     <div>
-        <scale-loader :loading="loading" >espere</scale-loader>
+        <pacman-loader :loading="loading"></pacman-loader>
     </div>
 </template>
 <script>
-    import ScaleLoader from 'vue-spinner/src/ScaleLoader'
+    import PacmanLoader from 'vue-spinner/src/PacmanLoader.vue'
+
 
     export default {
         created(){
@@ -13,7 +14,7 @@
 
        data(){
            return{
-               loading:false,
+               loading: false,
            }
        },
 
@@ -23,10 +24,10 @@
                 this.$store.dispatch('loadMessages')
                     .finally(()=>this.loading = false)
             },
+        },
 
         components: {
-                ScaleLoader
-            }
+            PacmanLoader
         }
     }
 </script>

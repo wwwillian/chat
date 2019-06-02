@@ -4,16 +4,24 @@
         <div class="form-group">
             <textarea @keydown="keydownMessage" v-model="body" placeholder="Sua Mensagem:" class="form-control"></textarea>
         </div>
-        <button :disabled="loading" @click.prevent="sendMessage" class="btn btn-success"><pulse-loader :loading="loading" :color="'#FFF'" :size="'8px'" class="float-left"></pulse-loader>Enviar</button>
+        <button :disabled="loading" @click.prevent="sendMessage" class="btn btn-success">
+            <pulse-loader
+                :loading="loading"
+                :color="'#FFF'"
+                :size="'8px'"
+                class="float-left">
+            </pulse-loader>
+            Enviar
+        </button>
     </div>
 </template>
 
 <script>
-    import PulseLoader from 'vue-spinner/src/PulseLoader'
+    import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
 
     export default{
         data(){
-            return{
+            return {
                 body: '',
                 loading: false,
             }
@@ -44,6 +52,6 @@
 
 </script>
 
-<style>
-    .float-left{float:left;}
-</style>
+<!--<style>-->
+<!--    .float-left{float:left;}-->
+<!--</style>-->

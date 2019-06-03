@@ -15,7 +15,10 @@ class Message extends Model
         return $this->user_id == auth()->user()->id;
     }
 
-//    public function  getCreatedAtAttribut
+    public function  getCreatedAtAttribute($value)
+    {
+        return \Carbon\Carbon::parse($value)->format('d/m/Y H:i');
+    }
 
     public function user()
     {

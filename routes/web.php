@@ -14,9 +14,11 @@
 Route::group(['middleware'=>'auth'], function (){
     Route::get('chat', 'Chat\ChatController@index')->name('chat');
 
-    Route::get('chat/messages', 'Chat\ChatController@messages');
+    Route::get('chat/messages', 'Chat\ChatController@messages')->name('messages');
+    Route::post('chat/message', 'Chat\ChatController@store')->name('store');
 
-    Route::post('chat/message', 'Chat\ChatController@store');
+    Route::get('/meu-perfil', 'User\UserController@profile')->name('profile');
+    Route::post('/meu-perfil', 'User\UserController@profileUpdate')->name('profileUpdate');
 });
 
 
